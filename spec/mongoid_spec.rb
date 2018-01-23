@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'spec_helper'
 require File.expand_path('../../lib/countries/mongoid', __FILE__)
 
 describe 'Mongoid support' do
@@ -24,7 +24,7 @@ describe 'Mongoid support' do
       end
 
       it 'should store nil given an invalid object' do
-        bad_types = [[], Time.now, {}, Date.today]
+        bad_types = [[], Time.now.utc, {}, Date.new(2029, 10, 1)]
         bad_types.each do |type|
           expect(ISO3166::Country.mongoize(type)).to eql nil
         end

@@ -1,3 +1,3 @@
 module Countries
-  VERSION = '1.2.2'
+  VERSION = '2.1.3'.freeze
 end

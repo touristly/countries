@@ -21,3 +21,5 @@ tmp
 .ruby-gemset
 .idea/
 Gemfile.lock
+bin/rspec
+examples.txt
